@@ -7,6 +7,7 @@ import {RouterModule} from '@angular/router';
 import {CoursesComponent} from './courses.component';
 import { CourseComponent } from './course/course.component';
 import {CoursesService} from './courses.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,10 +15,11 @@ import {CoursesService} from './courses.service';
     CoursesComponent,
     CourseComponent
   ],
-    imports: [
-        BrowserModule,
-        RouterModule
-    ],
+  imports: [
+    BrowserModule,
+    RouterModule,
+    FormsModule
+  ],
   providers: [
     CoursesService,
   ],
