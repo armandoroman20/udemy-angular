@@ -5,20 +5,23 @@ import {CoursesService} from './courses.service';
 @Component({
   selector: 'courses',
   template: `
-    <h2>{{ title }}</h2>
-  <ul>
-    <li *ngFor="let course of courses">
-      {{ course }}
-    </li>
-  </ul>
+<!--    two ways of doing the same call -->
+
+<!--    <h2>{{ title }}</h2>-->
+    <h2 [textContent]="title"></h2>
+
+    <img src="{{ imageUrl }}" />
+<!--<img [src]="imageUrl"/>-->
+
   `,
 
 })
 export class CoursesComponent {
   title = 'List of courses';
-  courses;
+  imageUrl = 'https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg';
+  // courses;
 
-  constructor(service: CoursesService) {
-    this.courses = service.getCourses();
-  }
+  // constructor(service: CoursesService) {
+  //   this.courses = service.getCourses();
+  // }
 }
