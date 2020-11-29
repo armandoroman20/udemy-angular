@@ -1,21 +1,14 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewEncapsulation} from '@angular/core';
+
 
 @Component({
   selector: 'favorite',
   templateUrl: './favorite.component.html',
   styleUrls: ['./favorite.component.css'],
-  styles: [
-    `
-      .glyphicon {
-        color: yellow;
-      }
-    `
-  ]
 })
 export class FavoriteComponent {
   // using an alias called 'is-favorite'
   @Input('isFavorite') isSelected: boolean;
-
   @Output('change') click = new EventEmitter();
 
   onClick() {
