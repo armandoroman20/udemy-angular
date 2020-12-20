@@ -1,7 +1,6 @@
-<div>
+<div *ngIf="courses.length > 0">
   List of courses
 </div>
-<div>
+<div *ngIf="courses.length == 0">
   No courses yet
 </div>
-<courses></courses>
