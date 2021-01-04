@@ -1,15 +1,25 @@
-<ul class="nav nav-pills">
-  <li class="nav-item" [class.active]="viewMode == 'map'">
-    <a class="nav-link " (click)="viewMode = 'map'">Map View</a>
-  </li>
-  <li class="nav-item" [class.active]="viewMode == 'list'">
-    <a class="nav-link " (click)="viewMode = 'list'">List View</a>
+<!--<ul class="nav nav-pills">-->
+<!--  <li class="nav-item" [class.active]="viewMode == 'map'">-->
+<!--    <a class="nav-link " (click)="viewMode = 'map'">Map View</a>-->
+<!--  </li>-->
+<!--  <li class="nav-item" [class.active]="viewMode == 'list'">-->
+<!--    <a class="nav-link " (click)="viewMode = 'list'">List View</a>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<div [ngSwitch]="viewMode">-->
+<!--  <div *ngSwitchCase="'map'">Map View Content</div>-->
+<!--  <div *ngSwitchCase="'list'">List View Content</div>-->
+<!--  <div *ngSwitchDefault>Otherwise</div>-->
+<!--</div>-->
+
+<!--exported values-->
+
+<button (click)="onAdd()">Add</button>
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course.name }}
+    <button (click)="onChange(course)">REMOVE</button>
   </li>
 </ul>
-<div [ngSwitch]="viewMode">
-  <div *ngSwitchCase="'map'">Map View Content</div>
-  <div *ngSwitchCase="'list'">List View Content</div>
-  <div *ngSwitchDefault>Otherwise</div>
-</div>
 
 
