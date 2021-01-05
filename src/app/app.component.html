@@ -1,24 +1,11 @@
-<!--<ul class="nav nav-pills">-->
-<!--  <li class="nav-item" [class.active]="viewMode == 'map'">-->
-<!--    <a class="nav-link " (click)="viewMode = 'map'">Map View</a>-->
-<!--  </li>-->
-<!--  <li class="nav-item" [class.active]="viewMode == 'list'">-->
-<!--    <a class="nav-link " (click)="viewMode = 'list'">List View</a>-->
-<!--  </li>-->
-<!--</ul>-->
-<!--<div [ngSwitch]="viewMode">-->
-<!--  <div *ngSwitchCase="'map'">Map View Content</div>-->
-<!--  <div *ngSwitchCase="'list'">List View Content</div>-->
-<!--  <div *ngSwitchDefault>Otherwise</div>-->
-<!--</div>-->
-
-<!--exported values-->
-
-<button (click)="loadCourses()">Load Courses</button>
-<ul>
-  <li *ngFor="let course of courses; trackBy: trackCourse">
-    {{ course.name }}
-  </li>
-</ul>
+<button
+  [style.fontWeight]="canSave ? 'bold': 'normal'"
+  [ngStyle]="{
+    'backgroundColor': canSave ? 'blue': 'gray',
+    'color': canSave ? 'white': 'black'
+  }"
+>
+  Save
+</button>
 
 
