@@ -9,7 +9,7 @@ export class AppComponent {
 task = {
   title: 'review applications',
   assignee: null
-}
+};
 }
 
 
